@@ -1,0 +1,82 @@
+<div class="container mt-5">
+    <div class="card shadow">
+        <div class="card-body">
+            <div class="text-center">
+                <h2>Formulario Ruta</h2>
+            </div>
+            <div class="registration-form m-3 p-4">
+                <form [formGroup]="registrationForm">
+                    <div class="row">
+                        <div class="d-flex justify-content-center">
+                            <mat-form-field appearance="outline">
+                              <mat-label>Ciudad Origen</mat-label>
+                              <mat-select formControlName="id_city_origin" placeholder="Selecciona Origen">
+                                <mat-option *ngFor="let city of ciudades" [value]="city.id">
+                                    {{ city.cityname }}
+                                </mat-option>
+                              </mat-select>
+                            </mat-form-field>
+                          </div>
+                          <div class="d-flex justify-content-center">
+                            <mat-form-field appearance="outline">
+                              <mat-label>Ciudad Destino</mat-label>
+                              <mat-select formControlName="id_city_destination" placeholder="Selecciona Destino">
+                                <mat-option *ngFor="let city of ciudades" [value]="city.id">
+                                    {{ city.cityname }}
+                                </mat-option>
+                              </mat-select>
+                            </mat-form-field>
+                          </div>
+                          <div class="d-flex justify-content-center">
+                            <mat-form-field appearance="outline">
+                              <mat-label>Bus</mat-label>
+                              <mat-select formControlName="id_bus" placeholder="Selecciona Autobus">
+                                <mat-option *ngFor="let bus of buses" [value]="bus.id">
+                                    {{ bus.unitnumber }}
+                                </mat-option>
+                              </mat-select>
+                            </mat-form-field>
+                          </div>
+                          <div class="d-flex justify-content-center">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Fecha Salida</mat-label>
+                                <input formControlName="date" matInput [matDatepicker]="pickerSalida">
+                                <mat-hint>MM/DD/YYYY</mat-hint>
+                                <mat-datepicker-toggle matIconSuffix [for]="pickerSalida"></mat-datepicker-toggle>
+                                <mat-datepicker #pickerSalida></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        
+                        <div class="d-flex justify-content-center">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Fecha Llegada</mat-label>
+                                <input formControlName="date_end" matInput [matDatepicker]="pickerLlegada">
+                                <mat-hint>MM/DD/YYYY</mat-hint>
+                                <mat-datepicker-toggle matIconSuffix [for]="pickerLlegada"></mat-datepicker-toggle>
+                                <mat-datepicker #pickerLlegada></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        
+                        <div class="d-flex justify-content-center">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Hora salida</mat-label>
+                                <input min="00:00" max="23:59" type="time" formControlName="start_time" matInput placeholder="Hora salida">
+                            </mat-form-field>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Hora llegada</mat-label>
+                                <input min="00:00" max="23:59" type="time" formControlName="end_time" matInput placeholder="Hora llegada">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="d-flex justify-content-center">
+                        <button (click)="submit()" mat-raised-button color="accent">Crear Autobús</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

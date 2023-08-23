@@ -1,0 +1,30 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+  }
+  
+  .card {
+    width: 55%; /* Ajusta el ancho de las tarjetas según tus necesidades */
+    margin-bottom: 20px; /* Ajusta el margen entre las tarjetas según tus necesidades */
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .image-size{
+    align-items: center;
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+    height: 200px; /* Ajusta la altura automáticamente para mantener la proporción */
+  }
+
+  .card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center; /* Alinea el texto en el centro horizontalmente */
+  }
+  
+  
+  

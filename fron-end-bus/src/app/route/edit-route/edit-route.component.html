@@ -1,0 +1,76 @@
+<div class="container mt-5">
+    <div class="card shadow">
+        <div class="card-body">
+            <div class="text-center">
+                <h2>Actualizar Datos de la Ruta</h2>
+            </div>
+
+            <div class="registration-form m-3 p-4">
+                <form [formGroup]="registrationForm">
+                    <div class="row">
+                        <div class="d-flex justify-content-center">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Ciudad Origen</mat-label>
+                                <input formControlName="city_origin" matInput placeholder="Ciudad Origen" >
+                                <mat-icon matSuffix>location_city</mat-icon>
+                            </mat-form-field>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Ciudad Destino</mat-label>
+                                <input formControlName="city_destination" matInput placeholder="Ciudad Destino">
+                                <mat-icon matSuffix>location_city</mat-icon>
+                            </mat-form-field>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Autobus</mat-label>
+                                <input formControlName="bus" matInput placeholder="Autobus">
+                                <mat-icon matSuffix>directions_bus</mat-icon>
+                            </mat-form-field>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Fecha Salida</mat-label>
+                                <input formControlName="date" matInput [matDatepicker]="picker">
+                                <mat-hint>MM/DD/YYYY</mat-hint>
+                                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Fecha Llegada</mat-label>
+                                <input formControlName="date_end" matInput [matDatepicker]="picker_end">
+                                <mat-hint>MM/DD/YYYY</mat-hint>
+                                <mat-datepicker-toggle matIconSuffix [for]="picker_end"></mat-datepicker-toggle>
+                                <mat-datepicker #picker_end></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Hora Salida</mat-label>
+                                <input formControlName="start_time" matInput placeholder="Hora Salida" type="time">
+                                <mat-icon matSuffix>access_time</mat-icon>
+                            </mat-form-field>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Hora Llegada</mat-label>
+                                <input formControlName="end_time" matInput placeholder="Hora Llegada" type="time">
+                                <mat-icon matSuffix>access_time</mat-icon>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="d-flex justify-content-center">
+                        <button *ngIf="isUpdateActive" (click)="update()" mat-raised-button color="accent">Actualizar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+        
+       

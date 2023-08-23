@@ -1,0 +1,20 @@
+<h1>Control de llegada</h1>
+
+<div *ngFor="let route of routes">
+  <mat-card>
+    <mat-card-header>
+      <mat-icon>{{ route.complete ? 'done' : 'schedule' }}</mat-icon>
+      <mat-card-title>{{ route.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-card-subtitle>Estado: {{ route.complete ? 'Completado' : 'En trayecto' }}</mat-card-subtitle>
+      <p>Ciudad Origen: {{ route.city_origin.cityname }} - {{ route.city_destination.cityname }}</p>
+      <button mat-raised-button color="primary" (click)="updateRouteStatus(route)">
+        Actualizar Estado
+      </button>
+      <button mat-raised-button color="accent" (click)="goToRouteDetails(route.id)">
+        Ver Detalles
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>

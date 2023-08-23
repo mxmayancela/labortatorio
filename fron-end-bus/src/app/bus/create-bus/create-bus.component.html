@@ -1,0 +1,67 @@
+<div class="container mt-5">
+    <div class="card shadow">
+        <div class="card-body">
+            <div class="text-center">
+                <h2>Formulario Autobús</h2>
+            </div>
+
+            <div class="registration-form m-3 p-4">
+                <form [formGroup]="registrationForm">
+                    <div class="row">
+                        <div class="d-flex justify-content-center">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Número de Unidad</mat-label>
+                                <input formControlName="unitnumber" matInput placeholder="Número de Unidad">
+                            </mat-form-field>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Placa</mat-label>
+                                <input formControlName="licenseplate" matInput placeholder="Placa">
+                            </mat-form-field>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <mat-form-field appearance="outline">
+                              <mat-label>Modelo</mat-label>
+                              <mat-select formControlName="model" placeholder="Selecciona un modelo">
+                                <!-- Aquí puedes iterar sobre una lista de modelos si la tienes -->
+                                <mat-option value="Mercedes-Benz Sprinter">Mercedes-Benz Sprinter</mat-option>
+                                <mat-option value="Volvo 9700">Volvo 9700</mat-option>
+                                <mat-option value="Scania Touring">Scania Touring</mat-option>
+                                <mat-option value="Hino">Hino</mat-option>
+                              </mat-select>
+                            </mat-form-field>
+                          </div>
+                        <div class="d-flex justify-content-center">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Año</mat-label>
+                                <input min="1990" max="2023" type="number" formControlName="year" matInput placeholder="Año">
+                            </mat-form-field>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Capacidad</mat-label>
+                                <input min="20" max="50" type="number" formControlName="capacity" matInput placeholder="Capacidad">
+                            </mat-form-field>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <mat-form-field appearance="outline">
+                              <mat-label>Transportista</mat-label>
+                              <mat-select formControlName="id_carrier" placeholder="Selecciona un transportista">
+                                <mat-option *ngFor="let transportista of transportistas" [value]="transportista.id">
+                                    {{ transportista.person.name + ' ' + transportista.person.lastnamefather +' '+ transportista.person.lastnamemother }}
+                                </mat-option>
+                              </mat-select>
+                            </mat-form-field>
+                          </div>
+                    </div>
+                    <br>
+                    <div class="d-flex justify-content-center">
+                        <button (click)="submit()" mat-raised-button color="accent">Crear Autobús</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,50 @@
+<mat-card class="example-card text-center">
+    <mat-card-header class="justify-content-center">
+      <div class="ml-auto">
+        <mat-card-title>{{carrierDetails.person.name}} {{carrierDetails.person.lastnamefather}} {{carrierDetails.person.lastnamemother}}</mat-card-title>
+        <mat-card-subtitle>{{carrierDetails.person.cedula}}</mat-card-subtitle>
+      </div>
+    </mat-card-header>
+  
+    <mat-card-content>
+        <div class="ml-3">
+            <img src="https://cdn.icon-icons.com/icons2/582/PNG/512/man-2_icon-icons.com_55041.png" alt="Foto del transportista" class="small-image">
+          </div>
+          <div class="ml-12">
+            <mat-list>
+                <mat-list-item>
+                  <div matLine>
+                    Licencia:
+                    <button mat-button>{{carrierDetails.license}}</button>
+                  </div>
+                </mat-list-item>
+                <mat-list-item>
+                    <div matLine>
+                        Nombres:
+                        <button mat-button>{{carrierDetails.person.name}}</button>
+                      </div>
+                </mat-list-item>
+                <mat-list-item>
+                    <div matLine>
+                        Apellidos:
+                        <button mat-button>{{carrierDetails.person.lastnamefather}} {{carrierDetails.person.lastnamemother}}</button>
+                      </div>
+                  </mat-list-item>
+                  <mat-list-item>
+                    <div matLine>
+                        Fecha de Nacimiento:
+                        <button mat-button>{{carrierDetails.person.birthdate}}</button>
+                      </div>
+                  </mat-list-item>
+                  <mat-list-item>
+                    <div matLine>
+                        No Cedula:
+                        <button mat-button>{{carrierDetails.person.cedula}}</button>
+                      </div>
+                  </mat-list-item>
+              </mat-list>
+          </div>
+      
+    </mat-card-content>
+  </mat-card>
+  

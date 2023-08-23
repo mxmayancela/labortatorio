@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+  <h1>Sistema de Gestión de Conductores</h1>
+  <span class="example-spacer"></span>
+  <button routerLink="/carrier/list" mat-raised-button color="accent">Conductores</button>
+  <button routerLink="/bus/list" mat-raised-button color="accent" class="ml-2">Buses</button>
+  <button routerLink="/route/list" mat-raised-button color="accent" class="ml-2">Rutas</button>
+  <button routerLink="/dashboard" mat-raised-button color="accent" class="ml-2">Panel General</button>
+</mat-toolbar>
+
+
+
+<div style="height:100%" class="container mt-4">
+  <router-outlet> </router-outlet>
+</div>
+
+<div style="background-color: #e53935;color:#fff;" class="container-fluid">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+
+      <span class="mb-3 mb-md-0 text-light">© 2023 SGCMacas LMT</span>
+    </div>
+
+    <ul class="col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><i class="fa fa-2x fa-instagram" aria-hidden="true"></i></li>
+      <li class="ms-3"><i class="fa fa-2x fa-facebook-official" aria-hidden="true"></i></li>
+      <li class="ms-3"><i class="fa fa-2x fa-twitter-square" aria-hidden="true"></i></li>
+    </ul>
+  </footer>
+</div>
+
+<lib-ng-toast></lib-ng-toast>
+<ng-confirm></ng-confirm>

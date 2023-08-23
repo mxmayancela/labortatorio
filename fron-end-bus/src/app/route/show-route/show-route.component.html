@@ -1,0 +1,87 @@
+<mat-card class="example-card text-center">
+    <mat-card-header class="justify-content-center">
+      <div class="ml-auto">
+        <mat-card-title>
+            <span class="origin-city">{{routeDetails.city_origin.cityname}}</span> - 
+            <span class="destination-city">{{routeDetails.city_destination.cityname}}</span>
+          </mat-card-title>
+          
+        <mat-card-subtitle>
+           Estado Actual: {{ routeDetails.complete ? 'COMPLETADO' : 'EN TRAYECTO' }}
+          </mat-card-subtitle>
+      </div>
+    </mat-card-header>
+  
+    <mat-card-content>
+        <div class="d-flex justify-content-between">
+          <div class="col-md-6">
+            <h1>Info Ruta</h1>
+            <mat-list>
+                <mat-list-item>
+                  <div matLine>
+                    Autobus Unidad:
+                    <button mat-button>{{routeDetails.bus.unitnumber}}</button>
+                  </div>
+                </mat-list-item>
+                <mat-list-item>
+                    <div matLine>
+                        Fecha Inicio:
+                        <button mat-button>{{routeDetails.date}}</button>
+                      </div>
+                </mat-list-item>
+                <mat-list-item>
+                    <div matLine>
+                        Hora Salida:
+                        <button mat-button>{{routeDetails.start_time}} </button>
+                      </div>
+                  </mat-list-item>
+                  <mat-list-item>
+                    <div matLine>
+                        Fecha de Llegadao:
+                        <button mat-button>{{routeDetails.date_end}}</button>
+                      </div>
+                  </mat-list-item>
+                  <mat-list-item>
+                    <div matLine>
+                        Hora de Llegada:
+                        <button mat-button>{{routeDetails.end_time}}</button>
+                      </div>
+                  </mat-list-item>
+              </mat-list>
+          </div>
+          <div class="col-md-6">
+            <h1>Info Conductor</h1>
+            <mat-list>
+              <mat-list-item>
+                <div matLine>
+                  Nombres:
+                  <button mat-button>{{routeDetails.bus.carrier.person.name}}</button>
+                </div>
+              </mat-list-item>
+              <mat-list-item>
+                <div matLine>
+                  Apellidos:
+                  <button mat-button>{{routeDetails.bus.carrier.person.lastnamefather}} {{routeDetails.bus.carrier.person.lastnamemother}}</button>
+                </div>
+              </mat-list-item><mat-list-item>
+                <div matLine>
+                  Cedula:
+                  <button mat-button>{{routeDetails.bus.carrier.person.cedula}}</button>
+                </div>
+              </mat-list-item><mat-list-item>
+                <div matLine>
+                  Licencia:
+                  <button mat-button>{{routeDetails.bus.carrier.license}}</button>
+                </div>
+              </mat-list-item>
+            </mat-list>
+          </div>
+          <div class="d-flex justify-content-center">
+            <button mat-raised-button color="primary" (click)="goBack('/route/update-complete')">Volver a Ruta Anterior</button>
+          </div>
+          
+        </div>
+      
+    </mat-card-content>
+  </mat-card>
+  

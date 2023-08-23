@@ -1,0 +1,38 @@
+
+    <div class="login-page">
+        <div class="login-box">
+            <div class="row">
+                <div class="col-md-6 left-column">
+                    <!-- Columna izquierda con la imagen -->
+                    <img src="https://www.chevrolet.com.ec/content/dam/chevrolet/south-america/ecuador/espanol/index/buses/2018-mt1-34s/01-images/2018-mt1-34s-jellybean.jpg?imwidth=960" alt="Imagen de inicio de sesión" class="img-fluid">
+                </div>
+                <div class="col-md-6 right-column">
+                    <!-- Columna derecha con el formulario -->
+                    <div class="card">
+                        <div class="card-body login-card-body">
+                            <p class="login-box-msg">INICIO DE SESIÓN ADMINISTRADOR</p>
+                            <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                    </div>
+                                    <input type="email" class="form-control" placeholder="Email" name="email" ngModel>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                    </div>
+                                    <input type="password" class="form-control" placeholder="Password" name="password" ngModel>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

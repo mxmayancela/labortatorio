@@ -1,0 +1,55 @@
+/* Estilo general para el cuerpo de la página */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+/* Estilos para el contenedor de inicio de sesión */
+.login-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 1000px; /* Ancho máximo ajustado */
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px; /* Añadido un poco de espacio */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilos para las columnas izquierda y derecha */
+.left-column,
+.right-column {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-column img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.login-card-body {
+  padding: 20px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .left-column,
+  .right-column {
+      flex: 1;
+      max-width: none;
+  }
+}
