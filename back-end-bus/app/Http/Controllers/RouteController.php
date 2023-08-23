@@ -168,7 +168,7 @@ class RouteController extends Controller
                 success: true,
                 data: $route,
                 status: 200,
-                message: 'Estado de ruta actualizado correctamente.',
+                message: 'Estado de ruta actualizado correctamente',
                 typeMessage: 'success'
             );
         } catch (\Throwable $th) {
